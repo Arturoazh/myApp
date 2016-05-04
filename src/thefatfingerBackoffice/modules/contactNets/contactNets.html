@@ -1,0 +1,56 @@
+<div id="sectionHome" flex layout="row">
+
+	<section flex layout="column">
+
+		<div flex class="scrolling" layout="column">
+			<div layout="row" layout-align="space-between center">
+				<h3>COMPARTIMOS:</h3>
+				<md-button class="md-icon-button" ng-click="button = !button">+</md-button>
+			</div>
+			<div flex layout="row">
+				<ul flex layout="column">
+					<li ng-repeat="(k,v) in data.sharing" class="layout-padding" flex layout-align="center center"> 
+						<div layout="row" layout-padding layout-align="center center">
+							<div flex="30">
+								<span>
+									<md-icon md-svg-icon="assets/icons/ic_account_circle_black_24px.svg" aria-label="Open Chat" class="startIcon"></md-icon>
+								</span>
+							</div>
+							<div flex>
+								<span>{{v}}</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div flex class="scrolling" layout="column" ng-show="!button">
+			<div layout="row" layout-align="space-between center">
+				<h3>NECESITAMOS:</h3>
+				<md-button class="md-icon-button">+</md-button>
+			</div>
+			<div flex layout="row">
+				<ul flex layout="column">
+					<li ng-repeat="(k,v) in data.needed" flex layout-padding layout-align="center center">
+						<div layout="row" layout-padding layout-align="center center">
+							<div flex="30">
+								<span>
+									<md-icon md-svg-icon="assets/icons/ic_account_circle_black_24px.svg" aria-label="Open Chat" class="startIcon"></md-icon>
+								</span>
+							</div>
+							<div flex>
+								<span>{{v}}</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+    <md-button class="md-fab md-primary md-hue-2" id="fabButton" aria-label="add">
+        <md-icon md-svg-src="assets/icons/ic_add_black_24px.svg"></md-icon>
+    </md-button>
+
+	</section>
+
+</div>

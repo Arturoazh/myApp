@@ -1,0 +1,33 @@
+#mailToolbar {
+  // background-color: #f8f8f8;
+  // border-bottom: 1px solid #e7e7e7;
+  >.md-toolbar-tools {
+    max-width: 1280px;
+  }
+}
+
+.imgBackground {
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-position: top center;
+  margin: 0 10px 0;
+}
+
+#alfImg {
+  background-image: url(../assets/imgs/alf.jpg);
+}
+
+#userImg {
+  background-image: url(../assets/imgs/jlbo2.jpg);
+}
+
+[contentEditable="true"] {
+  &:focus {
+    outline: 1px dashed rgba(0,0,0,0.2);
+  }
+}
+

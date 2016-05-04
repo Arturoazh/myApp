@@ -1,0 +1,19 @@
+#rules{
+	.md-item.open-item{
+		&.open-item{
+			>md-list-item{
+				font-size: 24px;
+			}
+		}
+
+		.item-card{
+			md-input-container{
+				margin: 18px 0 0;
+			}
+			b{
+				margin: 5px 0;
+			}
+		}
+
+	}
+}

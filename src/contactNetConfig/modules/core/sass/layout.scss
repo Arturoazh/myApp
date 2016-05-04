@@ -1,0 +1,219 @@
+$blueVC: #3cace1;
+$greenVC: #6b9e30;
+$smokeText: #9b9b9b;
+
+body {
+  // background: rgba(0,0,0,.04);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f738a4+0,f2e946+100 */
+  background: #f738a4; /* Old browsers */
+  background: -moz-linear-gradient(top,  #f738a4 0%, #f2e946 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #f738a4 0%,#f2e946 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #f738a4 0%,#f2e946 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f738a4', endColorstr='#f2e946',GradientType=0 ); /* IE6-9 */
+
+}
+
+
+body {
+  >md-content {
+    background: transparent;
+  }
+	[role="view"] >md-sidenav {
+  //   -webkit-transition : none!important;
+  //   -moz-transition : none!important;
+  //   -o-transition : none!important;
+		// transition: none!important;
+		// background: transparent;
+    >#sidenavUserInfo{
+      height: 185px;
+      background: $blueVC;
+      div:first-child {
+        >span {
+          border-radius: 50%;
+          max-height: 60px;
+          max-width: 60px;
+          width: 60px;
+          height: 60px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          border: 1px solid rgba(255,255,255,.5);
+          background-position: top center;
+        }
+      }
+    }
+
+	}
+	// [role="view"] >md-backdrop.md-sidenav-backdrop {
+	// 	z-index: -1!important;
+	// 	display: none!important;
+	// }
+}
+
+#navMenuTop {
+  >ul{
+    padding: 0;
+    li {
+      list-style: none;
+      font-size: 0.85rem;
+      a, button {
+        text-transform: none;
+      }
+    }
+  }
+}
+
+.masthead {
+  position: relative;
+  background: 0 0!important;
+  >div {
+    >md-input-container {
+      margin-bottom: 0; 
+      padding: 0;
+    }
+  }
+}
+
+
+.md-caption{
+  color: $smokeText;
+}
+
+.layoutMenu {
+  padding: 0;
+  margin: 0;
+  >li {
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    // text-align: left;
+    >div {
+      width: 75%;
+      >* {
+        text-align: left;
+        text-transform: none;
+        font-weight: 400;
+      }
+    }
+    >ul {
+      padding-left: 0px;
+      >li {
+        a, button {
+          text-align: left;
+          text-transform: none;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+
+.arrowDown {
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid black;
+}
+.arrowUp {
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid black;
+}
+
+[role="main"] {
+	background: transparent;
+  >md-toolbar {
+    // background: transparent;
+  }
+	>[ui-view] {
+		overflow: visible;
+		background: 0 0;
+    padding: 0px 0 0;
+    // opacity: 1;
+    // -webkit-transform:translate(0, 0);
+    // -moz-transform:translate(0, 0);
+    // -o-transform:translate(0, 0);
+    // transform:translate(0, 0);
+    // z-index: 1;
+    will-change: auto;
+	}
+}
+
+.ui-view-container {
+  position: relative;
+}
+
+[role="main"] >[ui-view].ng-enter, [role="main"] >[ui-view].ng-leave {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-transition:all 0.2s ease-in-out;
+	-moz-transition:all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+	transition:all 0.2s ease-in-out;
+}
+
+[role="main"] >[ui-view].ng-enter {
+  opacity: 0;
+  -webkit-transition-delay: 650ms;
+  -moz-transition-delay: 650ms;
+  -o-transition-delay: 650ms;
+  transition-delay: 650ms;
+  -webkit-transform:translate(0, 100px);
+  -moz-transform:translate(0, 100px);
+  -o-transform:translate(0, 100px);
+  transform:translate(0, 100px);
+}
+
+[role="main"] >[ui-view].ng-enter-active {
+  opacity: 1;
+  -webkit-transform:translate(0, 0);
+  -moz-transform:translate(0, 0);
+  -o-transform:translate(0, 0);
+  transform:translate(0, 0);
+}
+
+[role="main"] >[ui-view].ng-leave {
+  opacity: 1;
+  -webkit-transform:translate(0, 0);
+  -moz-transform:translate(0, 0);
+  -o-transform:translate(0, 0);
+  transform:translate(0, 0);
+}
+
+[role="main"] >[ui-view].ng-leave-active {
+  opacity: 0;
+  -webkit-transform:translate(0, 100px);
+  -moz-transform:translate(0, 100px);
+  -o-transform:translate(0, 100px);
+  transform:translate(0, 100px);
+}
+
+.disable-hover {
+  pointer-events: none;
+}
+
+.enable-hover {
+  pointer-events: all;
+}
+
+.planet-size-icon{
+  width: 130px;
+  height: 130px;
+}
+
+.big-icon{
+  width: 52px;
+  height: 52px;
+}
+
+.blueVC-color{
+  color: $blueVC;
+  outline: none;
+}
+
+.greenVC-color{
+  color: $greenVC!important;
+  outline: none;
+}
